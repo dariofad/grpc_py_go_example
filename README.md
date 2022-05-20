@@ -4,7 +4,9 @@ This repo is an example to show how to make remote procedure calls via
 gRPC between Python and Go. TLS (multi) is used to secure the network
 communication.
 
-Read [this article](TODO) for a complete walk-through.
+Read [this
+article](https://dariofad.github.io/2022/05/20/Calling_go_from_python_via_grpc.html)
+for a complete walk-through.
 
 ## Quickstart
 
