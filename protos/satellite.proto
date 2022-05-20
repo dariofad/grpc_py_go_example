@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package satellite;
+
+option go_package = "example.com/satellitepb";
+
+message Location {
+	int32 x = 1;
+	int32 y = 2;	
+}
+
+message Area {
+	Location ll = 1;
+	Location ur = 2;	
+}
+
+message Image {
+	int32 x = 1;
+	int32 y = 2;
+	bytes img = 3;
+}
+
+service Satellite {
+	rpc GetImage (Location) returns (Image) {};
+	rpc GetImages (Area) returns (stream Image) {};
+}
